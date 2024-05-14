@@ -1,0 +1,59 @@
+
+.slideritem{
+    padding: 12px;
+    border-radius: 20px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    direction: ltr;
+    &__image{
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        max-height: 250px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+    &__desc{
+        .title{
+            font-family: "bold";
+            font-size: 16px;
+            direction: rtl;
+        }
+    }
+    &__footer{
+        flex-direction: column;
+        .items{
+            border-bottom: 1px solid #F2F4FF;
+            .item{
+                .teacherimage{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+                p{
+                    font-family: "semi-bold";
+                    font-size: 14px;
+                    max-width: 100px;
+                }
+            }
+        }
+        .button{
+            a{
+                padding: 6px 20px;
+                border-radius: 14px;
+                font-family: "bold";
+                font-size: 16px;
+            }
+        }
+        .price{
+            direction: rtl;
+            font-size: 20px;
+            font-family: "bold";
+        }
+    }
+}

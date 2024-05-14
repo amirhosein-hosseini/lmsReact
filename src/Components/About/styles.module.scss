@@ -1,0 +1,18 @@
+.about{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    &__desc{
+        background: white;
+        padding: 32px;
+        border-radius: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+        p{
+            font-family: "ye-semibold";
+            font-size: 20px;
+            color: #202635;
+            direction: rtl;
+        }
+    }
+}

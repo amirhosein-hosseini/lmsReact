@@ -1,0 +1,59 @@
+.footer{
+    background: rgb(0, 0, 0, 20%);
+    &__wrapper{
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        @media only screen and (max-width:768px){
+            flex-direction: column !important;       
+            gap: 15px;
+        }
+    }
+
+    &__about{
+        p{
+            font-family: "bold";
+            font-size: 16px;
+        }
+    }
+    &__sign{
+        .desc{
+            font-family: "regular";
+            font-size: 16px;
+            direction: rtl;
+        }
+        .input{
+            position: relative;
+            input{
+                padding: 15px 25px;
+                text-align: right;
+                border-radius: 29px;
+                width: 100%;
+            }
+            button{
+                position: absolute;
+                left: 8px;
+                top: 6px;
+                padding: 9px 22px;
+                border-radius: 29px;
+                font-family: "regular";
+                font-size: 16px;
+            }
+        }
+    }
+    &__social{
+        .link{
+            padding: 10px 25px;
+            border-radius: 29px;
+        }
+    }
+
+}
+.title{
+    font-family: "bold";
+    font-size: 20px;
+}
+.item{
+    font-family: "regular";
+    font-size: 16px;
+}

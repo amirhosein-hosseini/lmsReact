@@ -1,0 +1,310 @@
+.top{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 68px;
+    @media only screen and (max-width:768px){
+        background: transparent;
+        padding: 0;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .listcontainer{
+        flex: 1;
+    }
+    &__navopen{
+        display: none;
+        svg{
+            color: white;
+            width: 40px;
+            height: 40px;
+        }
+        @media only screen and (max-width:768px){
+            display: block;
+        }
+    }
+    &__logo{
+        width: 70px;
+        height: 49px;
+        overflow: hidden;
+        @media only screen and (max-width:768px){
+    
+        }
+        Image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row-reverse;
+        @media only screen and (max-width:768px){
+            display: none !important;
+            z-index: 1000;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            padding-right: 2rem;
+            width: 90%;
+            height: 100vh;
+            background: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: end;
+            transform: translateX(0%);
+            transition: 0.3s ease-in transform;
+        }
+        .navclose{
+            display: none;
+            svg{
+                color: white;
+                width: 40px;
+                height: 40px;
+            }
+            @media only screen and (max-width:768px){
+                display: block;
+            }
+        }
+        li{
+            font-family: "semi-bold";
+            font-size: 18px;
+            color: rgb(44, 49, 86, 70%);
+            cursor: pointer;
+        }
+        li:hover{
+            color: #2C3156;
+            transition: 0.3s;
+        }
+        &__category{
+            position: relative;
+            z-index: 60;
+            &__categories{
+                top: 180px;
+                position: absolute;
+                background: white;
+                grid-template-columns: repeat(5,minmax(0,1fr));
+                width: 1200px;
+                left: 50%;
+                transform: translate(-57.8%, -50%);
+                border-radius: 20px;
+                gap: 25px;
+                padding: 24px;
+                transform: translate(-50%,0);
+                z-index: 70;
+                direction: rtl;
+                @media only screen and (max-width:768px){
+                    display: none !important;
+                }
+                &__item{
+                    &__title{
+                        background: #E6E7EC;
+                        border-radius: 10px;
+                        padding: 12px;
+                        text-align: right;
+                        p{
+                            font-family: "ye-semibold";
+                            font-size: 20px;
+                            color: #8F92A5;
+                        }
+                    }
+                    &__list{
+                        list-style-type: disc;
+                        text-align: right;
+                        direction: rtl;
+                        margin-right: 24px;
+                        li{
+                            font-family: "ye-regular";
+                            font-size: 16px;
+                            color: #8F92A5;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__sign{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        .basket{
+            position: relative;
+
+            .basketnumber{
+                background-image: url("../../../public/Images/basket-number.png");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -7px;
+                right: -7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                color: white;
+            }
+        }
+        .signbutton{
+            height: 48px;
+            .signbuttonbutton{
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to right,#5662AC , #7A90E9) !important;
+                border-radius: 10px;
+                padding: 0px 18px;
+                color: white;
+                font-family: "semi-bold";
+                font-size: 20px;
+                color: white;
+            }
+            button{
+                display: flex;
+                direction: rtl;
+                align-items: center;
+                gap: 10px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(to right,#5662AC , #7A90E9) !important;
+                border-radius: 10px;
+                padding: 0px 18px;
+                color: white;
+                font-family: "ye-semibold";
+                font-size: 20px;
+                color: white;
+                svg{
+                    width: 20px;
+                    fill: white;
+                }
+            }
+        }
+    }
+}
+
+
+.usersignwrapper{
+    position: relative;
+}
+
+.userdropdown{
+    position: absolute;
+    top: 75px;
+    width: 350px;
+    left: 0;
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 70;
+    &__header{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        direction: rtl;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid black;
+        .image{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .name{
+            font-family: "ye-regular";
+            font-size: 15px;
+            color: black;
+        }
+        .link{
+            font-family: "ye-regular";
+            font-size: 12px;
+            color: blue;
+            cursor: pointer;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            direction: rtl;
+            gap: 50px;
+            &__pre{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                .descwrapper{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .desc{
+                        font-family: "ye-regular";
+                        font-size: 15px;
+                        color: black;
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                    .predesc{
+                        font-family: "ye-regular";
+                        font-size: 12px;
+                        color: gray;
+                        display: flex;
+                        flex-wrap: nowrap;
+                    }
+                }
+                .image{
+                    svg{
+                        width: 40px;
+                        fill: black;
+                    }
+                }
+            }
+            &__next{
+                .link{
+                    font-family: "ye-regular";
+                    font-size: 12px;
+                    color: blue;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+.topMobile{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 18px -2px rgba(0,0,0,0.8);
+}

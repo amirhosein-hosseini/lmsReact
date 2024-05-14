@@ -1,0 +1,88 @@
+.coursePage{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 35px;
+    min-height: 100vh;
+    @media only screen and (max-width:768px){
+        flex-direction: column-reverse;     
+    }
+    .coursepagewrapper{
+        flex: 7;
+    }
+    &__wrapper{
+        grid-template-columns: repeat(3,minmax(0,1fr));
+        gap: 30px;
+        direction: rtl;
+        @media only screen and (max-width:768px){
+            grid-template-columns: repeat(1,minmax(0,1fr));       
+        }
+    }
+}
+.courseFilter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+    &__topic{
+        background: white;
+        border-radius: 15px;
+        .header{
+            p{
+                font-family: "ye-semibold";
+                font-size: 20px;
+                color: #1E2537;
+            }
+        }
+        .items{
+            gap: 10px;
+            margin-top: 15px;
+            .item{
+                font-family: "ye-semibold";
+                font-size: 16px;
+                color: #1E2537;
+            }
+        }
+    }
+    &__options{
+        background: white;
+        border-radius: 15px;
+        gap: 15px;
+        .switchOption{
+            p{
+                font-family: "ye-semibold";
+                font-size: 20px;
+                color: #1E2537;
+            }
+        }
+        .radioOption{
+            &__header{
+                p{
+                    font-family: "ye-semibold";
+                    font-size: 20px;
+                    color: #1E2537;
+                }
+            }
+            &__items{
+                margin-top: 15px;
+                .item{
+                    gap: 10px;
+                    .formGroup{
+                        direction: rtl;
+                        gap: 8px;
+                        label{
+                            font-family: "ye-semibold";
+                            font-size: 16px;
+                            color: #1E2537;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+  
+
+  

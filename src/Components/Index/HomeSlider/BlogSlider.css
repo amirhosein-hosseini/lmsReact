@@ -1,0 +1,25 @@
+.home-slider-wrapper{
+    padding-bottom: 100px;
+}
+.slick-track{
+    display: flex !important;
+    gap: 20px;
+}
+.home-slider-header{
+    flex-direction: row-reverse;
+    margin-bottom: 40px;
+    margin-top: 65px;
+}
+.home-slider-title{
+    font-family: "ul-bold";
+    font-size: 32px;
+    color: white;
+}
+.home-slider-button{
+    font-family: "bold";
+    font-size: 16px;
+    color: white;
+    background: #FF9648;
+    border-radius: 55px;
+    padding: 14px 20px;
+}

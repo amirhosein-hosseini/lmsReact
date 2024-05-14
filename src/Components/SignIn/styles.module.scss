@@ -1,0 +1,161 @@
+.signin{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    padding: 25px 0px;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &__header{
+            margin-bottom: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            .title{
+                font-family: "ye-bold";
+                font-size: 36px;
+                color: #080B0A;
+                @media only screen and (max-width:768px){
+                    font-size: 25px;
+                }
+            }
+            .desc{
+                font-family: "ye-semibold";
+                font-size: 16px;
+                color: #080B0A;
+                direction: rtl;
+                @media only screen and (max-width:768px){
+                    font-size: 12px;
+                }
+            }
+        }
+        &__form{
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid #EBECF1;
+            @media only screen and (max-width:768px){
+                border: none;
+            }
+            .formgroup{
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                gap: 8px;
+                margin-bottom: 12px;
+                input{
+                    border: 1px solid #E4E9E4;
+                    border-radius: 8px;
+                    width: 330px;
+                    padding: 8px 0px;
+                    text-align: right;
+                    font-size: 15px;
+                    font-family: "ye-regular";
+                    padding-right: 10px;
+                }
+                .labelwrapper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    direction: rtl;
+                    p{
+                        font-family: "ye-regular";
+                        font-size: 12px;
+                        color: gray;
+                    }
+                }
+                label{
+                    font-family: "ye-semibold";
+                    font-size: 14px;
+                    color: #202635;
+                }
+            }
+            .formtwogroup{
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 7px;
+                input{
+                    width: 161px;
+                }
+            }
+            .formbutton{
+                margin-top: 16px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                gap: 14px;
+                p{
+                    font-family: "ye-semibold";
+                    font-size: 16px;
+                    color: #202635;
+                }
+            }
+            .formgotosign{
+                display: flex;
+                flex-direction: column;
+                margin-top: 16px;
+                text-align: right;
+                gap: 10px;
+                p{
+                    font-family: "ye-semibold";
+                    font-size: 16px;
+                    color: #202635;
+                }
+            }
+        }
+    }
+}
+
+
+.codemodal{
+    background: rgb(0, 0, 0 , 30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .codemodalwrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background: white;
+        padding: 30px;
+        border-radius: 30px;
+    }
+    &__title{
+        p{
+            font-family: "ye-bold";
+            font-size: 20px;
+            color: black;
+        }
+    }
+    .formgroup{
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        gap: 8px;
+        margin-bottom: 12px;
+        input{
+            border: 1px solid #E4E9E4;
+            border-radius: 8px;
+            width: 330px;
+            padding: 8px 0px;
+            text-align: right;
+            font-size: 15px;
+            font-family: "ye-regular";
+            padding-right: 10px;
+        }
+    }
+    .formbutton{
+        width: 100%;
+    }
+}

@@ -1,0 +1,62 @@
+.wrapper{
+    border-radius: 20px;
+    background: linear-gradient(144deg, rgba(200,211,232,1) 0%, rgba(122,141,218,1) 100%);
+    position: relative;
+    padding: 50px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    &__left{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        @media only screen and (max-width:768px){
+            display: none;   
+        }
+    }
+    &__right{
+        z-index: 2;
+        margin-left: auto;
+        .title{
+            font-family: "ul-bold";
+            font-size: 40px;
+            @media only screen and (max-width:768px){
+                font-size: 25px;
+            }
+        }
+        .desc{
+            direction: rtl;
+            font-family: "semi-bold";
+            font-size: 24px;
+            max-width: 700px;
+            @media only screen and (max-width:768px){
+                font-size: 20px;
+            }
+        }
+        .button{
+            padding: 12px 21px;
+            border-radius: 10px;
+            font-family: "semi-bold";
+            font-size: 20px;
+            @media only screen and (max-width:768px){
+                font-size: 14px;
+                padding: 7px 9px;
+            }
+            img{
+                @media only screen and (max-width:768px){
+                    width: 18px;
+                }
+            }
+        }
+    }
+    &__becomebacgroundvector{
+        position: absolute;
+        width: 95%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        
+    }
+}

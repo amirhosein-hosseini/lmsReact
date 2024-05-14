@@ -1,0 +1,45 @@
+.slick-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.slick-buttons-wrapper{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 300px;
+}
+.slick-prev , .slick-next{
+    top: 100% !important;
+    display: none !important
+}
+.slick-dots{
+    bottom: -88px !important;
+    max-width: 300px;
+}
+.slick-slider.slick-initialized{
+    display: flex;
+    justify-content: center;
+}
+.slick-dots li button:before{
+    content: url("../../../../public/Images/nonactivenumber.png") !important;
+    width: 12px;
+    height: 12px;
+}
+.slick-dots li.slick-active button:before{
+    color: white !important;
+    content: url("../../../../public/Images/activenumber.png") !important;
+    width: 51px;
+}
+.slick-dots li{
+    width: 12px;
+}
+.slick-dots li.slick-active{
+    width: 51px;
+}
+.slider-5 .slick-dots li button:before{
+    content: url("../../../../public/Images/slider-5-non.png") !important;
+}
+.slider-5 .slick-dots li.slick-active button:before{
+    content: url("../../../../public/Images/slider-5-active.png") !important;
+}
