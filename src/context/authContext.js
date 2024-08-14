@@ -1,4 +1,3 @@
-"use client"
 import axios from 'axios';
 import React, { createContext, useState, useContext } from 'react';
 import { toast } from 'react-toastify';
@@ -22,7 +21,6 @@ export const AuthProvider = ({ children }) => {
       }
     })
       .then((response) => {
-          console.log(response)
           deleteCookie('token');
           setIsLoggedIn(false);
           navigate('/login')
@@ -37,6 +35,7 @@ export const AuthProvider = ({ children }) => {
     setCookie('token', token , 7);
     setIsLoggedIn(true);
     navigate('/');
+    window.location.reload()
   };
 
   return (

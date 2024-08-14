@@ -6,6 +6,7 @@ import axios from "axios";
 import { apiKey, prefix, url } from "../../api/domain";
 import { useAuth } from "../../context/authContext";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
 
@@ -43,7 +44,7 @@ const LoginPage = () => {
         if(response.data.status == "login"){
           signIn(response?.data?.data?.token);
         }else{
-          console.log(response?.data?.message)
+          toast.error(response?.data?.message)
         }
       })
       .catch((error) => {

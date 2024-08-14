@@ -4,6 +4,7 @@ import SingleContent from "../Single/SingleContent";
 import { getShowFile } from "../../api/course/Viewer";
 import { getShowCourse } from "../../api/course/ShowCourse";
 import { useParams } from "react-router-dom";
+import VideoPlayer from "./videoPlayer";
 
 const Viewer = () => {
 
@@ -40,6 +41,8 @@ const Viewer = () => {
 
 
 
+
+
     return(
         <div className={styles.viewer + " max-md:flex-col-reverse"}>
             <div className={styles.viewer__list}>
@@ -58,9 +61,12 @@ const Viewer = () => {
               </div>
               <SingleContent slug={params.slug} />
             </div>
-            <div className={styles.viewer__video}>
-                <iframe src={file?.file} allowfullscreen="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture full" type="text/html" class="block w-full h-[360px] sm:h-[520px] md:h-[740px]"></iframe>
-            </div>
+            {file?.file ? 
+              <div className={styles.viewer__video}>
+                {/* <iframe src={file?.file} allowfullscreen="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture full" type="text/html" class="block w-full h-[360px] sm:h-[520px] md:h-[740px]"></iframe> */}
+                <VideoPlayer src={file?.file} />
+              </div> : ""
+            }
         </div>
     )
 }

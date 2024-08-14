@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@videojs/http-streaming": "^3.13.3",
     "aos": "^3.0.0-beta.6",
     "axios": "^1.6.8",
+    "install": "^0.13.0",
     "moment-jalaali": "^0.10.0",
+    "npm": "^10.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
@@ -17,6 +20,7 @@
     "react-toastify": "^10.0.5",
     "sass": "^1.74.1",
     "slick-carousel": "^1.8.1",
+    "video.js": "^8.17.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

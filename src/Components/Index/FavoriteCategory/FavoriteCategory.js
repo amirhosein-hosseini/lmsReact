@@ -41,7 +41,7 @@ const FavoriteCategory = () => {
             <div className={styles.favoritecategory__items + " mt-8 mb-16"}>
                 {favoriteCategoreis?.map((item) => (
                     <Link to={"/course/" + item?.slug}>
-                        <div className={styles.item + " flex items-center justify-center flex-col bg-white p-8"} data-aos="zoom-in" data-aos-duration="1500">
+                        <div className={styles.item + " flex items-center justify-center flex-col bg-white py-8"} data-aos="zoom-in" data-aos-duration="1500">
                             <div className={styles.item__image}>
                                 <img src={item?.icon} alt="image"/>
                             </div>

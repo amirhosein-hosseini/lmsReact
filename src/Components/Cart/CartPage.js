@@ -42,8 +42,6 @@ const CartPage = () => {
         }
       });
   
-      // If the request is successful, reload the page
-      console.log('Data deleted successfully:', response.data);
       reloadPage();
     } catch (error) {
       // If there's an error, you can handle it here

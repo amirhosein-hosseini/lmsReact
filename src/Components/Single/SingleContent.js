@@ -78,28 +78,29 @@ const changingDateFormat = (dateChose) => {
     return jalaliDate;
 }
 
-  console.log(session)
 
   return (
     <div className={styles.content}>
       <div className={styles.contentwrapper}>
         <div className={styles.online}>
-        <p className={styles.title}>کلاس های آنلاین دوره</p>
-          {session?.map((item) => (
-            <div className={styles.contentwrapper__item} key={item.id}>
-              <div
-                className={styles.title}
-                onClick={() => handleShowSessionFiles(item.id)}
-              >
-                <div className={styles.title__right}>
-                  <p>{item.title}</p>
-                  
-                </div>
-                <p className={styles.title__left}>{item.topics_count}فایل</p>
-              </div>
-              {loading[item.id] === true ? 
-                <LoadingSvg color={"black"} /> : ""
-              }     
+        {session?.length > 0 ? 
+          <>
+              <p className={styles.title}>کلاس های آنلاین دوره</p>
+              {session?.map((item) => (
+                <div className={styles.contentwrapper__item} key={item.id}>
+                  <div
+                    className={styles.title}
+                    onClick={() => handleShowSessionFiles(item.id)}
+                  >
+                    <div className={styles.title__right}>
+                      <p>{item.title}</p>
+
+                    </div>
+                    <p className={styles.title__left}>{item.topics_count}فایل</p>
+                  </div>
+                  {loading[item.id] === true ?
+                    <LoadingSvg color={"black"} /> : ""
+                  }
                   {showSessionFiles === item.id && (
                     <div className={styles.items}>
                       {!loading[item.id] &&
@@ -113,42 +114,53 @@ const changingDateFormat = (dateChose) => {
                           </div>
                         ))}
                     </div>
-                  )}     
-            </div>
-          ))}
+                  )}
+                </div>
+              ))}
+          </> : ""
+        }
         </div>
-        <p className={styles.title}>محتوای آموزشی دوره</p>
-        {chapters?.map((item) => (
-          <div className={styles.contentwrapper__item} key={item.id}>
-            <div
-              className={styles.title}
-              onClick={() => handleShowFiles(item.id)}
-            >
-              <div className={styles.title__right}>
-                <p>{item.title}</p>
-                
+        {chapters?.length > 0 ? 
+        <>
+            <p className={styles.title}>محتوای آموزشی دوره</p>
+            {chapters?.map((item) => (
+              <div className={styles.contentwrapper__item} key={item.id}>
+                <div
+                  className={styles.title}
+                  onClick={() => handleShowFiles(item.id)}
+                >
+                  <div className={styles.title__right}>
+                    <p>{item.title}</p>
+
+                  </div>
+                  <p className={styles.title__left}>{item.topics_count}فایل</p>
+                </div>
+                {loading[item.id] === true ?
+                  <LoadingSvg color={"black"} /> : ""
+                }
+                {openTitleId === item.id && (
+                  <div className={styles.items}>
+                    {!loading[item.id] &&
+                      showchapterFiles[item.id]?.map((file) => (
+                        <div className={styles.desc} key={file.id}>
+                          <p className={styles.name}>{file.title}</p>
+                          <div className={styles.detail}>
+                            {file?.auth_has_access == true ? <Link to={"/viewer/" + slug + "/film/" + file?.id + "/" + item?.id}>مشاهده ویدیو</Link> : <p className="text[#6D7083] text-xs">مشاهده ویدیو</p>}
+                            <p className={styles.duration}>{file.time}</p>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                )}
               </div>
-              <p className={styles.title__left}>{item.topics_count}فایل</p>
-            </div>
-            {loading[item.id] === true ? 
-              <LoadingSvg color={"black"} /> : ""
-            }            
-            {openTitleId === item.id && (
-              <div className={styles.items}>
-                {!loading[item.id] &&
-                  showchapterFiles[item.id]?.map((file) => (
-                    <div className={styles.desc} key={file.id}>
-                      <p className={styles.name}>{file.title}</p>
-                      <div className={styles.detail}>
-                        {file?.auth_has_access == true ? <Link to={"/viewer/" + slug + "/film/" + file?.id + "/" + item?.id}>مشاهده ویدیو</Link> : <p className="text[#6D7083] text-xs">مشاهده ویدیو</p>}
-                        <p className={styles.duration}>{file.time}</p>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            )}
-          </div>
-        ))}
+            ))}
+        </> : ""
+        }
+        {session?.length === 0 && chapters?.length === 0 ? 
+          <p className="text-center">
+            محتوایی برای این دوره وجود ندارد
+          </p> : ''
+        } 
       </div>
     </div>
   );

@@ -203,14 +203,17 @@ const Header = () => {
               </div>
             }
           </div>
-          <div className={styles.basket} style={isMobile ? {display: "none"} : {}}>
-            <Link to={"/cart"}>
-              <img src={"../../Images/basket.png"} alt="" />
-            </Link>
-            <div className={styles.basketnumber}>
-              <span>{userDetail?.count_cart_items}</span>
-            </div>
-          </div>
+
+          {isLoggedIn === true ? 
+              <div className={styles.basket} style={isMobile ? { display: "none" } : {}}>
+                <Link to={"/cart"}>
+                  <img src={"../../Images/basket.png"} alt="" />
+                </Link>
+                <div className={styles.basketnumber}>
+                  <span>{userDetail?.count_cart_items}</span>
+                </div>
+              </div> : ""
+          }
         </div>
         </div>
       </div>

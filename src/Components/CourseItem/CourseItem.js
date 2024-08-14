@@ -20,7 +20,7 @@ const CourseItem = ({categories , discount_amount , duration , id , image, order
     return(
         <div className={styles.slideritem + " bg-white text-right"} data-aos="zoom-in" data-aos-duration="1500">
             <div className={styles.slideritem__image}>
-                {image != "" ? <img src={image} alt="image" /> : <img src="../../images/defaultcourseimage.jpg" alt="image" />}
+                {image ? <img src={image} alt="image" /> : <img src="../../images/defaultcourseimage.jpg" alt="image" />}
                 {/* <img src={image} alt="image" /> */}
             </div>
             <div className={styles.slideritem__desc}>

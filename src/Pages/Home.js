@@ -91,7 +91,10 @@ const HomePage = () => {
 
     return(
         <div className="home">
-            <HomeHero />
+            <div className="mb-10">
+              <HomeHero />
+            </div>
+            
             <Achievement />
             {newCourses ? <HomeSlider data={newCourses} title={"جدیدترین دوره ها"} cat={"newest"} /> : ""}
             <FavoriteCategory />

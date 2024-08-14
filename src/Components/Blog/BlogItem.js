@@ -13,13 +13,15 @@ const BlogItem = ({author , category , category_slug , comment_count , commetns,
 
     
     return(
-        <div className={styles.blogitem + " bg-white flex flex-col justify-between items-center p-3 text-right"} data-aos="zoom-in" data-aos-duration="1500">
+        <div className={styles.blogitem + " bg-white flex flex-col justify-between items-center p-3 text-right h-[400px]"} data-aos="zoom-in" data-aos-duration="1500">
             <div>
                 <div className={styles.blogitem__image}>
                     <img src={image} alt="image" />
                 </div>
+            </div>
+            <div>
                 <div className={styles.blogitem__desc + " mt-3"}>
-                    <p className={styles.title}>
+                    <p className={styles.title + " line-clamp-2 text-right"}>
                         {title}
                     </p>
                     {/* <div className={styles.desc + " text-gray-700"}>

@@ -1,0 +1,26 @@
+.video-js .vjs-control-bar .custom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.video-js .vjs-control-bar .custom-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ensure the icons are visible */
+.video-js .vjs-control-bar .custom-icon svg {
+    fill: #fff;
+}
+
+/* You might need to adjust the size of the buttons */
+.video-js .vjs-control-bar .vjs-button {
+    width: 4em;
+    height: 3em;
+}
+.vjs-picture-in-picture-control{
+    display: none !important;
+}

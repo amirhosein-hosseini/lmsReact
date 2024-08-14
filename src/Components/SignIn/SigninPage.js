@@ -52,7 +52,6 @@ const SigninPage = () => {
       }
     })
       .then((response) => {
-          console.log(response)
           setUserId(response?.data?.data?.user_id);
           if(response?.data?.status == "stored"){
             setLevel(2)
@@ -98,7 +97,6 @@ const SigninPage = () => {
       }
     })
       .then((response) => {
-          console.log(response)
           if(response?.data?.status == "verified"){
             setLevel(3)
           }else{

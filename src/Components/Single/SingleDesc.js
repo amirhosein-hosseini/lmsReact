@@ -13,34 +13,15 @@ const SingleDesc = ({data , faqs}) => {
                 </div>
             }
 
-            <div className={styles.SingleDesc__desc}>
-                <p className={styles.title}>
-                    {data?.title}
-                </p>
-                <div className={styles.desc} dangerouslySetInnerHTML={{ __html: data?.description }}></div>
-            </div>
-            {/* <div className={styles.SingleDesc__benefit + " flex flex-col"}>
-                <p className={styles.title}>
-                    برخی از مزایای استفاده از لاراول : 
-                </p>
-                <ul>
-                    <li>
-                        یادگیری آسان و بروز
-                    </li>
-                    <li>
-                        یادگیری آسان و بروز
-                    </li>
-                    <li>
-                        یادگیری آسان و بروز
-                    </li>
-                    <li>
-                        یادگیری آسان و بروز
-                    </li>
-                    <li>
-                        یادگیری آسان و بروز
-                    </li>
-                </ul>
-            </div> */}
+            {data?.description ? 
+                <div className={styles.SingleDesc__desc}>
+                    <p className={styles.title}>
+                        {data?.title}
+                    </p>
+                    <div className={styles.desc} dangerouslySetInnerHTML={{ __html: data?.description }}></div>
+                </div> : ''
+            }
+
             {data?.video_demo && 
                 <div className={styles.SingleDesc__video}>
                     <p className={styles.title}>
@@ -53,14 +34,18 @@ const SingleDesc = ({data , faqs}) => {
                     </div>
                 </div>
             }
-            <div className={styles.SingleDesc__items}>
-                <p className={styles.title}>
-                    سوالات متداول   
-                </p>
-                {faqs?.map((item) => (
-                    <SingleDescItem data={item} />
-                ))}
-            </div>
+
+            {faqs ? 
+                <div className={styles.SingleDesc__items}>
+                    <p className={styles.title}>
+                        سوالات متداول
+                    </p>
+                    {faqs?.map((item) => (
+                        <SingleDescItem data={item} />
+                    ))}
+                </div> : ""
+            }
+
         </div>
     )
 }
